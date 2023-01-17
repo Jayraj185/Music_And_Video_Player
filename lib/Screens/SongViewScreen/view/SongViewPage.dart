@@ -172,20 +172,33 @@ class _SongViewPageState extends State<SongViewPage> {
                               activeColor: Colors.indigo,
                             ),
                             SizedBox(height: 0.6.h,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  // "${position.inHours}:${position.inMinutes}:${position.inSeconds} / ${ProviderTrue!.songduration}",
-                                  "${position.inMinutes}:${position.inSeconds - position.inMinutes * 60} / ${ProviderTrue!.songduration.inMinutes}:${ProviderTrue!.songduration.inSeconds - ProviderTrue!.songduration.inMinutes * 60}",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 18.sp,
-                                      fontWeight: FontWeight.bold
+                            Padding(
+                              padding:  EdgeInsets.symmetric(horizontal: 6.w),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    // "${position.inHours}:${position.inMinutes}:${position.inSeconds} / ${ProviderTrue!.songduration}",
+                                    "${position.inMinutes} : ${position.inSeconds - position.inMinutes * 60}",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 18.sp,
+                                        fontWeight: FontWeight.bold
 
+                                    ),
                                   ),
-                                )
-                              ],
+                                  Text(
+                                    // "${position.inHours}:${position.inMinutes}:${position.inSeconds} / ${ProviderTrue!.songduration}",
+                                    "${ProviderTrue!.songduration.inMinutes} : ${ProviderTrue!.songduration.inSeconds - ProviderTrue!.songduration.inMinutes * 60}",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 18.sp,
+                                        fontWeight: FontWeight.bold
+
+                                    ),
+                                  )
+                                ],
+                              ),
                             )
                           ],
                         );
