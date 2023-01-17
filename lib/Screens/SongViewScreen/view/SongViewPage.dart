@@ -177,7 +177,7 @@ class _SongViewPageState extends State<SongViewPage> {
                               children: [
                                 Text(
                                   // "${position.inHours}:${position.inMinutes}:${position.inSeconds} / ${ProviderTrue!.songduration}",
-                                  "${position.inHours}:${position.inMinutes}:${position.inSeconds.toInt()} / ${ProviderTrue!.songduration.inHours}:${ProviderTrue!.songduration.inMinutes}:${ProviderTrue!.songduration.inSeconds}",
+                                  "${position.inMinutes}:${position.inSeconds - position.inMinutes * 60} / ${ProviderTrue!.songduration.inMinutes}:${ProviderTrue!.songduration.inSeconds - ProviderTrue!.songduration.inMinutes * 60}",
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 18.sp,
